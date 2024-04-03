@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Portfolio</title>
-    <link rel="stylessheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to my Portfolio</h1>
+        <h1>Welcome to My Portfolio</h1>
         <nav>
             <a href="#about-me">About Me</a>
             <a href="#published-works">Published Works</a>
@@ -17,33 +17,39 @@
     </header>
     
     <main>
-        <section>
-            <h2 class="" id="about-me">About Me</h2>
-            <div>
-                <img src="./assets/images/" alt="#">
+        <img src="./assets/images/1008A8E2-E854-44D8-8B7A-2DE7EF8EB704_1_105_c.jpeg">
+        <section id="about-me">
+            <h2>About Me</h2>
+            <div id="text-block">
                 <p> Tristin Rohr Web Developer,
-                    With a passion for creating elegant and functional digital experiences, Tristin Rohr is a seasoned web developer specializing in front-end and back-end development. With 1 year of experience in the industry, he have honed his skills in crafting responsive, user-friendly websites and web applications.
-                    Throughout his career, Tristin Rohr has demonstrated proficiency in a wide range of programming languages and technologies, including HTML5, CSS3, JavaScript, and various front-end frameworks such as React.js, Angular, and Vue.js. He also possess expertise in back-end development using languages like Python, PHP, or Node.js, coupled with database management systems such as MySQL, MongoDB, or PostgreSQL.
+                    With a passion for creating elegant and functional digital experiences, Tristin Rohr is a seasoned web developer specializing in front-end and back-end development. With 1 year of experience in the industry, he has honed his skills in crafting responsive, user-friendly websites and web applications.
+                    Throughout his career, Tristin Rohr has demonstrated proficiency in a wide range of programming languages and technologies, including HTML5, CSS3, JavaScript, and various front-end frameworks such as React.js, Angular, and Vue.js. He also possesses expertise in back-end development using languages like Python, PHP, or Node.js, coupled with database management systems such as MySQL, MongoDB, or PostgreSQL.
                 </p>
             </div>
         </section>
 
-        <section>
-            <h2 class="" id="published-works">Published Works</h2>
+        <section id="published-works">
+            <h2>Published Works</h2>
             <div>
                 <ul>
-                    <a href="#">
-                       <img src="./assets/images/" alt="#">
-                    </a>
-                    <a>
-                        <img src="./assets/images/" alt="#">
-                    </a>
+                    <li class="first-work">
+                        <a href="https://tristinrohr.github.io/PreWork-Study-Guide/" target="_blank">
+                           <img src="assets/images/Screenshot 2024-04-03 at 5.48.57 AM.png" alt="Screenshot of Study Guide Webpage">
+                             <div class="text">Study Guide</div>
+                        </a>
+                    </li>
+                    <li class="second-work">
+                        <a href="https://tristinrohr.github.io/Challenge-1---Refactoring/" target="_blank">
+                          <img src="./assets/images/Screenshot 2024-04-03 at 5.49.05 AM.png" alt="Screenshot of Refactored Webpaged">
+                             <div class="text">Refactored</div>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>
 
-        <section>
-            <h2 class="" id="contact-me">Contact Me</h2>
+        <section id="contact-me">
+            <h2>Contact Me</h2>
             <div>
                 <form action="#" method="POST">
                     <label for="name">Name:</label>
@@ -60,5 +66,18 @@
             </div>
         </section>
     </main>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
