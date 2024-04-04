@@ -1,19 +1,21 @@
-
+/* Resetting default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: black;
+    background-color: #f0f0f0;
 }
 
+/* Header styles */
 header {
-    background-color: red;
-    color: whitesmoke;
+    background-color: #333;
+    color: #fff;
     padding: 20px;
     text-align: center; 
 }
@@ -23,99 +25,85 @@ header h1 {
 }
 
 header nav a {
-    color: black;
+    color: #fff;
     text-decoration: none;
     margin-right: 20px;
 }
 
-
+/* Main styles */
 main {
     padding: 20px;
 }
 
-
+/* Section styles */
 section {
     margin-bottom: 30px;
 }
 
-
+/* About Me section styles */
 #about-me h2 {
     color: #333;
     margin-bottom: 10px;
-    text-align: center; 
+    text-align: center;
 }
-
-
+/* Image styles */
 img {
     max-width: 75%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
-
-label {
-    color: white
+#profile-picture{
+    max-width: 15%;
+    height:auto;
+    margin-left: 0;
 }
 
+/* Text block styles */
 #text-block {
-    background-color: black;
+    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color:#fff
 }
 
-
-#published-works h2{
-    color: white;
-    margin-bottom: 10px;
+/* Published Works section styles */
+#published-works {
     text-align: center;
 }
 
-.first-work img {
-    width: 100%;
-    height: auto;
+#published-works h2 {
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.first-work .text {
-    text-align: center;
+#published-works ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.second-work .text {
-    text-align: center;
-}
-
-.text{
+#published-works ul li {
+    display: inline-block;
+    margin: 10px;
     position: relative;
 }
 
-#contact-me h2 {
-    color: white;
-    margin-bottom: 10px;
-    text-align: center;
-}
-#contact-me label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-#contact-me input,
-#contact-me textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-#contact-me button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+#published-works img {
     display: block; 
-    margin: 0 auto;
+    max-width: 75%; 
+}
+#first-work img{
+    max-width: 100%;
 }
 
-#contact-me button:hover {
-    background-color: whtie;
+
+.overlay {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px; 
+    border-radius: 5px; 
 }
