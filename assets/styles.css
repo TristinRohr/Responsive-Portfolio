@@ -14,25 +14,37 @@ body {
 
 /* Header styles */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #2d19dc;
+    color: silver;
     padding: 20px;
     text-align: center; 
 }
 
 header h1 {
     margin: 0;
+    font-size: 250%;
 }
 
 header nav a {
-    color: #fff;
+    color: silver;
     text-decoration: none;
     margin-right: 20px;
+    font-size: 200%;
+}
+.header-container{
+    display: flex;
+    vertical-align: center;
+    justify-content: space-between;
+}
+.header-left{
+flex-grow: 1;
+
 }
 
 /* Main styles */
 main {
     padding: 20px;
+    background-color: silver;
 }
 
 /* Section styles */
@@ -42,9 +54,14 @@ section {
 
 /* About Me section styles */
 #about-me h2 {
-    color: #333;
+    color: silver;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: start;
+    margin-left: 5%;
+    font-size: 250%;
+    background-color: #2d19dc;
+    padding: 20px 50px;
+    border-radius: 5%;
 }
 /* Image styles */
 img {
@@ -62,19 +79,25 @@ img {
 /* Text block styles */
 #text-block {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 5%;
+    box-shadow: 15px 15px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 5px;
 }
 
 /* Published Works section styles */
 #published-works {
-    text-align: center;
+    text-align: start;
+    margin: 5%;
 }
 
 #published-works h2 {
-    color: #333;
+    color: silver;
     margin-bottom: 20px;
+    font-size: 250%;
+    padding: 20px 50px;
+    background-color: #2d19dc;
+    border-radius: 5%;
 }
 
 #published-works ul {
@@ -91,7 +114,10 @@ img {
 
 #published-works img {
     display: block; 
-    max-width: 75%; 
+    max-width: 50%;
+    border-radius: 5%;
+    box-shadow: 10px 10px 10px lightblue;
+    border: black 20px;
 }
 #first-work img{
     max-width: 100%;
@@ -103,7 +129,20 @@ img {
     top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%); 
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px 20px; 
-    border-radius: 5px; 
+    background-color: black;
+    padding: 40px 80px; 
+    border-radius: 30px; 
+    color: silver;
+    font-size: 200%;
+}
+
+@media screen and (min-width: 800px) {
+    section {
+        display: flex;
+        align-items: center;
+    }
+
+    section h2 {
+        margin-right: 20px;
+    }
 }
