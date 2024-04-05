@@ -17,7 +17,8 @@ header {
     background-color: #2d19dc;
     color: silver;
     padding: 20px;
-    text-align: center; 
+    text-align: center;
+    list-style-type: none; 
 }
 
 header h1 {
@@ -27,7 +28,6 @@ header h1 {
 
 header nav a {
     color: silver;
-    text-decoration: none;
     margin-right: 20px;
     font-size: 200%;
     text-decoration: underline;
