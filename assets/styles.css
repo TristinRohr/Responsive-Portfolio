@@ -1,148 +1,109 @@
-/* Resetting default margin and padding */
-* {
+body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;
-}
-
-/* Header styles */
-header {
-    background-color: #2d19dc;
-    color: silver;
-    padding: 20px;
-    text-align: center;
-    list-style-type: none; 
-}
-
-header h1 {
-    margin: 0;
-    font-size: 250%;
-}
-
-header nav a {
-    color: silver;
-    margin-right: 20px;
-    font-size: 200%;
-    text-decoration: underline;
-}
-.header-container{
+.header-container {
     display: flex;
-    vertical-align: center;
     justify-content: space-between;
-}
-.header-left{
-flex-grow: 1;
-}
-
-/* Main styles */
-main {
     padding: 20px;
-    background-color: silver;
 }
 
-/* Section styles */
-section {
-    margin-bottom: 30px;
-}
-
-/* About Me section styles */
-#about-me h2 {
-    color: silver;
-    margin-bottom: 10px;
-    text-align: start;
-    margin-left: 5%;
-    font-size: 250%;
-    background-color: #2d19dc;
-    padding: 20px 50px;
-    border-radius: 5%;
-}
-/* Image styles */
-img {
-    max-width: 75%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-#profile-picture{
-    max-width: 15%;
-    height:auto;
-    margin-left: 0;
-}
-
-/* Text block styles */
-#text-block {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 5%;
-    box-shadow: 15px 15px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px 5px;
-}
-
-/* Published Works section styles */
-#published-works {
-    text-align: start;
-    margin: 5%;
-}
-
-#published-works h2 {
-    color: silver;
-    margin-bottom: 20px;
-    font-size: 250%;
-    padding: 20px 50px;
-    background-color: #2d19dc;
-    border-radius: 5%;
-}
-
-#published-works ul {
+nav ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
 }
 
-#published-works ul li {
-    display: inline-block;
-    margin: 10px;
-    position: relative;
+nav li {
+    display: inline;
+    margin-right: 20px;
 }
 
-#published-works img {
-    display: block; 
-    max-width: 50%;
-    border-radius: 5%;
-    box-shadow: 10px 10px 10px lightblue;
-    border: black 20px;
-}
-#first-work img{
-    max-width: 100%;
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default */
+    gap: 20px;
+    padding: 20px;
 }
 
-
-.overlay {
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    background-color: black;
-    padding: 40px 80px; 
-    border-radius: 30px; 
-    color: silver;
-    font-size: 200%;
+.left-side-content {
+    display: grid;
+    grid-template-columns: 1fr; /* Keeps it as a single column initially */
+    gap: 20px;
+}
+/* General image style adjustments */
+img {
+    max-width: 100%; /* Ensures images are not wider than their container */
+    height: auto; /* Maintains the aspect ratio */
+}
+.published-works img {
+    max-height: 200px; /* Limits the image height in the published works section */
+    object-fit: cover; /* Ensures images cover the defined area nicely */
 }
 
-@media screen and (min-width: 800px) {
-    section {
-        display: flex;
-        align-items: center;
+/* Ensuring images within each work are responsive */
+.published-works li {
+    display: block; /* Adjust as needed, could be flex for a different layout */
+    margin-bottom: 20px; /* Adds some space between each work */
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    #profile-picture {
+        width: 100px; /* Smaller profile picture on smaller screens */
+        height: 100px;
     }
 
-    section h2 {
-        margin-right: 20px;
+    .published-works img {
+        max-height: 150px; /* Smaller images in the published works section */
     }
+}
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 3fr 1fr; /* Left side larger, adjust ratio as needed */
+    }
+}
+
+/* Styles for sections for better readability */
+section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Specific adjustments for profile pictures and published works images */
+#profile-picture {
+    width: 150px; /* Adjust based on desired size */
+    height: 150px; /* Adjust based on desired size */
+    object-fit: cover; /* Ensures the image covers the area without losing its aspect ratio */
+    border-radius: 50%; /* Circular profile picture */
+}
+
+/* Improving the form appearance */
+form > label {
+    display: block;
+    margin-top: 10px;
+}
+
+form > input, form > textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+form > button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > button:hover {
+    background-color: #0056b3;
 }
