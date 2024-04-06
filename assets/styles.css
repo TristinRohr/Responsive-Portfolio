@@ -59,6 +59,7 @@ img {
         max-height: 150px; /* Smaller images in the published works section */
     }
 }
+
 /* Media query for larger screens */
 @media (min-width: 768px) {
     main {
