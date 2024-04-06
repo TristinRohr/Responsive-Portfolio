@@ -1,148 +1,56 @@
-/* Resetting default margin and padding */
-* {
+body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;
-}
-
-/* Header styles */
-header {
-    background-color: #2d19dc;
-    color: silver;
-    padding: 20px;
-    text-align: center;
-    list-style-type: none; 
-}
-
-header h1 {
-    margin: 0;
-    font-size: 250%;
-}
-
-header nav a {
-    color: silver;
-    margin-right: 20px;
-    font-size: 200%;
-    text-decoration: underline;
-}
-.header-container{
+.container {
     display: flex;
-    vertical-align: center;
-    justify-content: space-between;
-}
-.header-left{
-flex-grow: 1;
 }
 
-/* Main styles */
-main {
+.sidebar {
+    background-color: #f0f0f0; /* Light grey for visibility */
     padding: 20px;
-    background-color: silver;
+    width: 200px; /* Fixed sidebar width */
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Includes padding in the width */
 }
 
-/* Section styles */
-section {
-    margin-bottom: 30px;
+.sidebar h2 {
+    margin: 0; /* Removes default margin to eliminate space between headings */
+    padding: 10px 0; /* Adds some padding for visual separation */
 }
 
-/* About Me section styles */
-#about-me h2 {
-    color: silver;
-    margin-bottom: 10px;
-    text-align: start;
-    margin-left: 5%;
-    font-size: 250%;
-    background-color: #2d19dc;
-    padding: 20px 50px;
-    border-radius: 5%;
+main {
+    flex-grow: 1; /* Allows main content to fill the rest of the space */
+    padding: 20px;
 }
-/* Image styles */
+/* General image style adjustments */
 img {
-    max-width: 75%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    max-width: 100%; /* Ensures images are not wider than their container */
+    height: auto; /* Maintains the aspect ratio */
 }
-#profile-picture{
-    max-width: 15%;
-    height:auto;
-    margin-left: 0;
-}
-
-/* Text block styles */
-#text-block {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 5%;
-    box-shadow: 15px 15px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px 5px;
-}
-
-/* Published Works section styles */
-#published-works {
-    text-align: start;
-    margin: 5%;
-}
-
-#published-works h2 {
-    color: silver;
+section {
     margin-bottom: 20px;
-    font-size: 250%;
-    padding: 20px 50px;
-    background-color: #2d19dc;
-    border-radius: 5%;
 }
 
-#published-works ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#published-works ul li {
-    display: inline-block;
-    margin: 10px;
-    position: relative;
-}
-
-#published-works img {
-    display: block; 
-    max-width: 50%;
-    border-radius: 5%;
-    box-shadow: 10px 10px 10px lightblue;
-    border: black 20px;
-}
-#first-work img{
-    max-width: 100%;
-}
-
-
-.overlay {
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    background-color: black;
-    padding: 40px 80px; 
-    border-radius: 30px; 
-    color: silver;
-    font-size: 200%;
-}
-
-@media screen and (min-width: 800px) {
-    section {
-        display: flex;
-        align-items: center;
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
     }
 
-    section h2 {
-        margin-right: 20px;
+    .sidebar {
+        width: auto; /* Sidebar takes full width */
+        height: auto; /* Adjust height based on content */
+        display: flex; /* Aligns the h2 elements horizontally */
+        justify-content: space-around; /* Evenly spaces the h2 elements */
+    }
+
+    .sidebar h2 {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    main {
+        padding-top: 20px;
     }
 }
